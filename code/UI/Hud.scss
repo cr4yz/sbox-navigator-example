@@ -4,6 +4,50 @@ hud {
         display: none;
     }
 
+    menu {
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 32px;
+        left: 32px;
+        background-color: rgba(black .75);
+        backdrop-filter: blur(10px);
+        flex-direction: row;
+        color: white;
+        pointer-events: all;
+        padding: 20px;
+        border-radius: 20px;
+
+        > .sidebar {
+            width: 30%;
+            flex-grow: 1;
+            margin-right: 30px;
+            flex-direction: column;
+
+            navlink {
+                font-size: 18px;
+                padding: 20px;
+                background-color: rgba(52, 87, 94, 0.37);
+                border-radius: 10px;
+                margin-bottom: 5px;
+
+                &.active {
+                    background-color: #3472e6;
+                }
+
+                &:hover {
+                    background-color: #3472e6;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        > .content {
+            width: 70%;
+            padding: 20px;
+        }
+    }
+
     .page {
         flex-direction: column;
     }
@@ -18,49 +62,9 @@ hud {
     }
 
     .square {
-        width:128px;
-        height:128px;
+        width: 128px;
+        height: 128px;
         background-color: red;
         border-radius: 20%;
-    }
-
-    menu {
-        width: 50%;
-        height: 50%;
-        position: absolute;
-        top: 32px;
-        left: 32px;
-        background-color: rgba(black .5);
-        flex-direction: row;
-        color: white;
-        pointer-events: all;
-
-        > .sidebar {
-            width: 30%;
-            background-color: rgba(black .5);
-            flex-grow: 1;
-            margin-right: 30px;
-            flex-direction: column;
-
-            navlink {
-                font-size: 18px;
-                padding: 20px;
-                background-color: rgba(black .5);
-
-                &.active {
-                    background-color: black;
-                }
-
-                &:hover {
-                    background-color: black;
-                    cursor: pointer;
-                }
-            }
-        }
-
-        > .content {
-            width: 70%;
-            padding: 20px;
-        }
     }
 }
